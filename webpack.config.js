@@ -5,6 +5,7 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
+  //mode: "production",
   mode: "development",
   devServer: {
     static: path.join(__dirname, "public"),
