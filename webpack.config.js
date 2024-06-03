@@ -13,8 +13,7 @@ module.exports = {
   },
   output: {
     publicPath: "auto",
-    path: path.resolve(__dirname, "build"), // Set the output path to "build"
-    filename: "main.bundle.js",
+    path: path.resolve(__dirname, "build"),
   },
   module: {
     rules: [
@@ -48,7 +47,6 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./DashboardApp": "./src/App",
-        "./myDashboard": "./src/componets/Dashboard",
       },
       shared: {
         react: {
