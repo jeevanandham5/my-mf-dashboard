@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+//dashboard
+import React from "react";
+import Dashboard from "./componets/Dashboard";
 
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./home";
+import HomeNav from "./homenav";
+
+function App({ userName, mycount, setMycount }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <div className="mb-4">
+          <HomeNav
+            userName={userName}
+            mycount={mycount}
+            setMycount={setMycount}
+          />
+        </div>
+        <Routes>
+          <Route
+            path="/dashboard"
+            element={
+              <Home
+                mycount={mycount}
+                setMycount={setMycount}
+                userName={userName}
+              />
+            }
+          />
+          <Route
+            path="/myDashboard"
+            element={
+              <Dashboard
+                mycount={mycount}
+                setMycount={setMycount}
+                userName={userName}
+              />
+            }
+          />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
