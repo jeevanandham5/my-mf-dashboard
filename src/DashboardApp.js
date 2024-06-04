@@ -1,13 +1,12 @@
 //dashboard-app
 import React from "react";
 import Dashboard from "./componets/Dashboard";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./home";
 import HomeNav from "./homenav";
 
 function DashboardApp({ userName, mycount, setMycount, currentPath }) {
   console.log(currentPath);
-  const location = useLocation();
 
   return (
     <>
@@ -36,7 +35,6 @@ function DashboardApp({ userName, mycount, setMycount, currentPath }) {
               mycount={mycount}
               setMycount={setMycount}
               userName={userName}
-              pagelocation={location.pathname.replace("/", "/")}
             />
           }
         />
