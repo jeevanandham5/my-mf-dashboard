@@ -1,45 +1,19 @@
-//dashboard
-import React from "react";
-import Dashboard from "./componets/Dashboard";
+//dashboard-app
+import React, { useEffect, useState } from "react";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import DashboardApp from "./DashboardApp";
 
-import Home from "./home";
-import HomeNav from "./homenav";
-
-function App({ userName, mycount, setMycount }) {
+function App({ userName, mycount, setMycount, currentPath }) {
   return (
     <>
       <Router>
-        <div className="mb-4">
-          <HomeNav
-            userName={userName}
-            mycount={mycount}
-            setMycount={setMycount}
-          />
-        </div>
-        <Routes>
-          <Route
-            path="/dashboard"
-            element={
-              <Home
-                mycount={mycount}
-                setMycount={setMycount}
-                userName={userName}
-              />
-            }
-          />
-          <Route
-            path="/myDashboard"
-            element={
-              <Dashboard
-                mycount={mycount}
-                setMycount={setMycount}
-                userName={userName}
-              />
-            }
-          />
-        </Routes>
+        <DashboardApp
+          userName={userName}
+          mycount={mycount}
+          setMycount={setMycount}
+          currentPath={currentPath}
+        />
       </Router>
     </>
   );

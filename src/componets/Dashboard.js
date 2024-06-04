@@ -9,7 +9,12 @@ import PieChart from "../widgets/pieChart";
 import Stackedchart from "../widgets/stackedchart";
 import HomeNav from "../homenav";
 
-export default function Dashboard({ userName, mycount, setMycount }) {
+export default function Dashboard({
+  userName,
+  mycount,
+  setMycount,
+  pagelocation,
+}) {
   const data = [
     { type: "Task 1", value: 27 },
     { type: "Task 2", value: 25 },
@@ -17,6 +22,7 @@ export default function Dashboard({ userName, mycount, setMycount }) {
     { type: "Task 4", value: 15 },
     { type: "Task 5", value: 10 },
   ];
+  console.log(pagelocation);
   return (
     <>
       <div className={Styles.grid_container}>

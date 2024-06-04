@@ -32,9 +32,9 @@ export default function HomeNav({ userName, mycount, setMycount }) {
                 Dashboard
               </Link>
               <Link
-                to={"/myDashboard"}
+                to={"/dashboard/Widgets"}
                 className={`btn btn-primary ${
-                  isActive("/myDashboard") ? "active bg-info" : ""
+                  isActive("/dashboard/Widgets") ? "active bg-info" : ""
                 }`}
               >
                 Widgets
