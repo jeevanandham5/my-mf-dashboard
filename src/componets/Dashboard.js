@@ -7,7 +7,6 @@ import Gradientchart from "../widgets/gradientchart";
 import Linechart from "../widgets/linechart";
 import PieChart from "../widgets/pieChart";
 import Stackedchart from "../widgets/stackedchart";
-import HomeNav from "../homenav";
 
 export default function Dashboard({
   userName,
@@ -22,7 +21,7 @@ export default function Dashboard({
     { type: "Task 4", value: 15 },
     { type: "Task 5", value: 10 },
   ];
-  console.log(pagelocation);
+
   return (
     <>
       <div className={Styles.grid_container}>

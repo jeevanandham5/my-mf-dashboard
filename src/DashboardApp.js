@@ -5,9 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./home";
 import HomeNav from "./homenav";
 
-function DashboardApp({ userName, mycount, setMycount, currentPath }) {
-  console.log(currentPath);
-
+function DashboardApp({ userName, mycount, setMycount }) {
   return (
     <>
       <div className="mb-4">
