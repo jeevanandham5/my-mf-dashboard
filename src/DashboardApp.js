@@ -26,16 +26,7 @@ function DashboardApp({ userName, mycount, setMycount }) {
             />
           }
         />
-        <Route
-          path="/dashboard/Widgets"
-          element={
-            <Dashboard
-              mycount={mycount}
-              setMycount={setMycount}
-              userName={userName}
-            />
-          }
-        />
+        <Route path="/dashboard/Widgets" element={<Dashboard />} />
       </Routes>
     </>
   );
