@@ -27,6 +27,7 @@ function DashboardApp({ userName, mycount, setMycount }) {
           }
         />
         <Route path="/dashboard/Widgets" element={<Dashboard />} />
+        <Route path="/dashboard/jeeva" element={<Dashboard />} />
       </Routes>
     </>
   );
